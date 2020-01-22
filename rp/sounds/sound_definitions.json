@@ -1,0 +1,117 @@
+{
+  "mob.guard_illager.ambient": {
+    "sounds": [
+      {
+        "name": "sounds/mob/guard_illager/idle1",
+        "volume": 1.25
+      },
+      {
+        "name": "sounds/mob/guard_illager/idle2",
+        "volume": 1.25
+      }
+    ]
+  },
+  "mob.guard_illager.death": {
+    "sounds": [
+      {
+        "name": "sounds/mob/guard_illager/death1",
+        "volume": 1.25
+      },
+      {
+        "name": "sounds/mob/guard_illager/death2",
+        "volume": 1.25
+      }
+    ]
+  },
+  "mob.guard_illager.hurt": {
+    "sounds": [
+      {
+        "name": "sounds/mob/guard_illager/hurt1",
+        "volume": 1.25
+      },
+      {
+        "name": "sounds/mob/guard_illager/hurt2",
+        "volume": 1.25
+      },
+      {
+        "name": "sounds/mob/guard_illager/hurt3",
+        "volume": 1.25
+      }
+    ]
+  },
+  "mob.guard_illager.angry": {
+    "sounds": [
+      {
+        "name": "sounds/mob/guard_illager/angry",
+        "volume": 1.25
+      }
+    ]
+  },
+  "mob.guard_illager.step": {
+    "sounds": [
+      "sounds/mob/guard_illager/step1",
+      "sounds/mob/guard_illager/step2",
+      "sounds/mob/guard_illager/step3",
+      "sounds/mob/guard_illager/step4",
+      "sounds/mob/guard_illager/step5",
+      "sounds/mob/guard_illager/step6"
+    ]
+  },
+  "mob.hyena.say": {
+    "sounds": [
+      "sounds/mob/hyena/say1",
+      "sounds/mob/hyena/say2",
+      "sounds/mob/hyena/say3",
+      "sounds/mob/hyena/say4"
+    ]
+  },
+  "mob.hyena.death": {
+    "sounds": [
+      "sounds/mob/hyena/death1",
+      "sounds/mob/hyena/death2"
+    ]
+  },
+  "mob.hyena.hurt": {
+    "sounds": [
+      "sounds/mob/hyena/hurt1",
+      "sounds/mob/hyena/hurt2"
+    ]
+  },
+  "mob.illusion_illager.ambient": {
+    "sounds": [
+      "sounds/mob/illusion_illager/idle1",
+      "sounds/mob/illusion_illager/idle2",
+      "sounds/mob/illusion_illager/idle3",
+      "sounds/mob/illusion_illager/idle4"
+    ]
+  },
+  "mob.illusion_illager.death": {
+    "sounds": [
+      "sounds/mob/illusion_illager/death1",
+      "sounds/mob/illusion_illager/death2"
+    ]
+  },
+  "mob.illusion_illager.hurt": {
+    "sounds": [
+      "sounds/mob/illusion_illager/hurt1",
+      "sounds/mob/illusion_illager/hurt2",
+      "sounds/mob/illusion_illager/hurt3"
+    ]
+  },
+  "mob.illusion_illager.mirror_move": {
+    "sounds": [
+      "sounds/mob/illusion_illager/mirror_move1",
+      "sounds/mob/illusion_illager/mirror_move2"
+    ]
+  },
+  "mob.illusion_illager.prepare_blind": {
+    "sounds": [
+      "sounds/mob/illusion_illager/prepare_blind"
+    ]
+  },
+  "mob.illusion_illager.prepare_mirror": {
+    "sounds": [
+      "sounds/mob/illusion_illager/prepare_mirror"
+    ]
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "savageandravage:creepie": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "hurt": "mob.creeper.say",
+          "death": "mob.creeper.death",
+          "fuse": {
+            "sound": "random.fuse",
+            "volume": 1.0,
+            "pitch": 0.5
+          }
+        }
+      },
+      "savageandravage:defender": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "ambient": "mob.guard_illager.ambient",
+          "death": "mob.guard_illager.death",
+          "hurt": "mob.guard_illager.hurt",
+          "mad": "mob.guard_illager.angry",
+          "step": {
+            "sound": "mob.guard_illager.step",
+            "volume": 1.0,
+            "pitch": 1.0
+          },
+          "ambient.in.raid": {
+            "sound": "mob.guard_illager.ambient",
+            "volume": 3.0,
+            "pitch": [ 0.8, 1.2 ]
+          }
+        }
+      },
+      "savageandravage:friendly_ravager": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "ambient": "mob.ravager.ambient",
+          "hurt": "mob.ravager.hurt",
+          "death": "mob.ravager.death",
+          "step": "mob.ravager.step",
+          "attack.strong": "mob.ravager.bite",
+          "roar": "mob.ravager.roar",
+          "stun": "mob.ravager.stun",
+          "mad": "mob.ravager.stun",
+          "ambient.in.raid": {"sound": "mob.ravager.ambient", "volume": 3.0, "pitch": [ 0.8, 1.2 ]},
+          "celebrate": "mob.ravager.celebrate"
+        }
+      },
+      "savageandravage:griefer_illager": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "ambient": "mob.vindicator.idle",
+          "hurt": "mob.vindicator.hurt",
+          "death": "mob.vindicator.death",
+          "shoot": "mob.snowgolem.shoot",
+          "ambient.in.raid": {"sound": "mob.vindicator.idle", "volume": 3.0, "pitch": [ 0.8, 1.2 ]},
+          "celebrate": "mob.vindicator.celebrate"
+        }
+      },
+      "savageandravage:hyena": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "ambient": "mob.hyena.say",
+          "hurt": "mob.hyena.hurt",
+          "death": "mob.hyena.death",
+          "step": {
+            "sound": "mob.wolf.step",
+            "volume": 0.15,
+            "pitch": 1.0
+          },
+          "shake": {
+            "sound": "mob.wolf.shake",
+            "pitch": [ 0.8, 1.2 ]
+          },
+          "growl": "mob.wolf.growl"
+        }
+      },
+      "savageandravage:poultry_farmer": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "ambient": "mob.vindicator.idle",
+          "hurt": "mob.vindicator.hurt",
+          "death": "mob.vindicator.death",
+          "shoot": "mob.snowgolem.shoot",
+          "ambient.in.raid": {"sound": "mob.vindicator.idle", "volume": 3.0, "pitch": [ 0.8, 1.2 ]},
+          "celebrate": "mob.vindicator.celebrate"
+        }
+      },
+      "savageandravage:scavenger": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "ambient": "mob.vindicator.idle",
+          "hurt": "mob.vindicator.hurt",
+          "death": "mob.vindicator.death",
+          "throw": {"sound": "mob.witch.throw", "volume": 1.0, "pitch": 1.0},
+          "ambient.in.raid": {"sound": "mob.vindicator.idle", "volume": 3.0, "pitch": [ 0.8, 1.2 ]},
+          "celebrate": "mob.vindicator.celebrate"
+        }
+      },
+      "savageandravage:skeleton_villager": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "ambient": "mob.skeleton.say",
+          "hurt": {
+            "sound": "mob.skeleton.hurt",
+            "volume": 0.7
+          },
+          "death": "mob.skeleton.death",
+          "step": {
+            "sound": "mob.skeleton.step",
+            "volume": 1.0,
+            "pitch": 1.0
+          }
+        }
+      },
+      "minecraftunused:illusion_illager": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "shoot": "mob.snowgolem.shoot",
+          "ambient": "mob.illusion_illager.ambient",
+          "death": "mob.illusion_illager.death",
+          "hurt": "mob.illusion_illager.hurt",
+          "prepare.wololo": "mob.illusion_illager.prepare_blind",
+          "prepare.attack": "mob.illusion_illager.prepare_attack",
+          "prepare.summon": "mob.illusion_illager.prepare_mirror",
+          "ambient.in.raid": {"sound": "mob.illusion_illager.ambient", "volume": 3.0, "pitch": [ 0.8, 1.2 ]}
+        }
+      }
+    }
+  }
+}

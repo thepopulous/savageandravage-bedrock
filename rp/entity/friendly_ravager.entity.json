@@ -1,0 +1,69 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "savageandravage:friendly_ravager",
+      "textures": {
+        // Base Textures
+        "base": "textures/entity/friendly_ravager/friendly_ravager_base",
+        "base2": "textures/entity/friendly_ravager/friendly_ravager_base",
+        "base3": "textures/entity/friendly_ravager/friendly_ravager_base",
+        "base4": "textures/entity/friendly_ravager/friendly_ravager_base",
+        "base5": "textures/entity/friendly_ravager/friendly_ravager_base",
+        "base6": "textures/entity/friendly_ravager/friendly_ravager_base",
+
+        // Biome Layer
+        "desert": "textures/entity/friendly_ravager/biomes/biome_desert",
+        "jungle": "textures/entity/friendly_ravager/friendly_ravager_base",
+        "plains": "textures/entity/friendly_ravager/friendly_ravager_base",
+        "savanna": "textures/entity/friendly_ravager/friendly_ravager_base",
+        "snow": "textures/entity/friendly_ravager/biomes/biome_snow",
+        "swamp": "textures/entity/friendly_ravager/friendly_ravager_base",
+        "taiga": "textures/entity/friendly_ravager/friendly_ravager_base",
+
+        // Saddle Layer
+        "saddle_none": "textures/entity/friendly_ravager/saddle/none",
+        "saddle": "textures/entity/friendly_ravager/saddle/saddle"
+      },
+      "materials": {
+        "default": "friendly_ravager"
+      },
+      "geometry": {
+        "default": "geometry.friendly_ravager"
+      },
+      "render_controllers": [
+        "controller.render.friendly_ravager_base",
+        "controller.render.friendly_ravager_biomes",
+        "controller.render.friendly_ravager_saddle"
+      ],
+      "spawn_egg": {
+        "base_color": "#12698049",
+        "overlay_color": "#0xc2c0b7"
+      },
+      "animations": {
+        "walk": "animation.ravager.walk",
+        "look_at_target": "animation.common.look_at_target",
+        "idle_mouth": "animation.ravager.idle_mouth",
+        "stunned": "animation.ravager.stunned",
+        "roaring": "animation.ravager.roaring",
+        "move": "controller.animation.ravager.move",
+        "head": "controller.animation.ravager.head_movement",
+        "biting": "animation.ravager.biting"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.roar_length = 1.0;", // in seconds
+          "variable.bite_anim_duration = 0.75f;", // in seconds
+          "variable.bite_neck_length = 10;"
+        ],
+        "animate": [
+          "move",
+          "head"
+        ]
+      },
+      "particle_effects": {
+        "stun_particles": "minecraft:stunned_emitter"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "resource_pack_name": "Savage and Ravage",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "creeper_spores": {
+      "textures": "textures/items/creeper_spores"
+    },
+    "guard_helmet": {
+      "textures": "textures/items/guard_helmet"
+    },
+    "poultry_farmer_hat": {
+      "textures": "textures/items/poultry_farmer_hat"
+    },
+    "sinister_horn": {
+      "textures": "textures/items/sinister_horn"
+    },
+    "brew_of_the_beast": {
+      "textures": "textures/items/brew_of_the_beast"
+    }
+  }
+}

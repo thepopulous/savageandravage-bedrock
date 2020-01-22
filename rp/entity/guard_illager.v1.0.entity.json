@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "savageandravage:defender",
+      "materials": { "default": "guard_illager" },
+      "textures": { "default": "textures/entity/illager/guard_illager" },
+      "geometry": { "default": "geometry.guard_illager" },
+      "scripts": {
+        "scale": "0.9375",
+        "animate": [
+          "controller_look_at_target",
+          "controller_vindicator_base",
+          "controller_riding"
+        ]
+      },
+      "animations": {
+        "look_at_target_default": "animation.humanoid.look_at_target.default.v1.0",
+        "look_at_target_gliding": "animation.humanoid.look_at_target.gliding.v1.0",
+        "look_at_target_swimming": "animation.humanoid.look_at_target.swimming.v1.0",
+        "riding.arms": "animation.vindicator.riding.arms",
+        "riding.legs": "animation.vindicator.riding.legs",
+        "vindicator_base": "animation.vindicator.base",
+        "vindicator_attack": "animation.vindicator.attack",
+        "vindicator_walk": "animation.vindicator.walk",
+        "celebrating": "animation.humanoid.celebrating",
+        "controller_look_at_target": "controller.animation.humanoid.look_at_target",
+        "controller_vindicator_base": "controller.animation.vindicator.base",
+        "controller_riding": "controller.animation.humanoid.riding"
+      },
+      "render_controllers": [ "controller.render.guard_illager" ],
+      "enable_attachables": true,
+      "spawn_egg": {
+        "base_color": "#9804699",
+        "overlay_color": "#0x879C9B"
+      }
+    }
+  }
+}

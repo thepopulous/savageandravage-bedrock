@@ -1,0 +1,706 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "savageandravage:friendly_ravager",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "component_groups": {
+      "minecraft:ravager_adult": {
+        "minecraft:experience_reward": {
+          "on_bred": "Math.Random(1,7)",
+          "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+        },
+        "minecraft:loot": {
+          "table": "loot_tables/entities/friendly_ravager.json"
+        },
+        "minecraft:behavior.run_around_like_crazy": {
+          "priority": 1,
+          "speed_multiplier": 1.2
+        }
+      },
+
+      "minecraft:ravager_angry": {
+        "minecraft:angry": {
+          "duration": 25,
+          "calm_event": {
+            "event": "minecraft:on_calm",
+            "target": "self"
+          }
+        },
+        "minecraft:on_target_acquired": {
+        }
+      },
+
+      "minecraft:ravager_wild": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "player",
+            "zombie"
+          ],
+          "interact_text": "action.interact.mount",
+          "seats": {
+            "position": [ 0.0, 2.1, -0.3 ]
+          }
+
+        },
+        "minecraft:behavior.mount_pathing": {
+          "priority": 2,
+          "speed_multiplier": 1.5,
+          "target_dist": 0.0,
+          "track_target": true
+        },
+        "minecraft:on_target_acquired": {
+          "event": "minecraft:become_angry",
+          "target": "self"
+        },
+        "minecraft:tamemount": {
+          "min_temper": 0,
+          "max_temper": 100,
+          "feed_text": "action.interact.feed",
+          "ride_text": "action.interact.mount",
+          "feed_items": [
+            {
+              "item": "wheat",
+              "temper_mod": 3
+            },
+            {
+              "item": "sugar",
+              "temper_mod": 3
+            },
+            {
+              "item": "apple",
+              "temper_mod": 3
+            },
+            {
+              "item": "golden_carrot",
+              "temper_mod": 5
+            },
+            {
+              "item": "golden_apple",
+              "temper_mod": 10
+            },
+            {
+              "item": "appleEnchanted",
+              "temper_mod": 10
+            }
+          ],
+          "auto_reject_items": [
+            {
+              "item": "saddle"
+            }
+          ],
+          "tame_event": {
+            "event": "minecraft:on_tame",
+            "target": "self"
+          }
+        }
+      },
+
+      "minecraft:ravager_tamed": {
+        "minecraft:is_tamed": {
+        },
+        "minecraft:health": {
+          "max": 120,
+          "value": 120
+        },
+        "minecraft:behavior.follow_owner": {
+          "priority": 6,
+          "speed_multiplier": 1.0,
+          "start_distance": 10,
+          "stop_distance": 2
+        },
+        "minecraft:behavior.owner_hurt_by_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 2
+        },
+        "minecraft:attack": {
+          "damage": 15.0
+        },
+        "minecraft:sittable": {
+        },
+        "minecraft:rideable": {
+          "priority": 0,
+          "seat_count": 1,
+          "crouching_skip_interact": true,
+          "family_types": [
+            "player"
+          ],
+          "interact_text": "action.interact.ride.horse",
+          "seats": {
+            "position": [ 0.0, 2.1, -0.3 ]
+          }          
+        },
+        "minecraft:inventory": {
+          "inventory_size": 2,
+          "container_type": "horse"
+        },
+        "minecraft:behavior.tempt": {
+          "priority": 5,
+          "speed_multiplier": 1.2,
+          "items": [
+            "apple",
+            "carrot",
+            "golden_apple",
+            "appleEnchanted",
+            "golden_carrot",
+            "hay_block",
+            "sugar",
+            "bread",
+            "wheat"
+          ]
+        }
+      },
+
+      "minecraft:ravager_saddled": {
+        "minecraft:is_saddled": {
+        },
+        "minecraft:input_ground_controlled": {
+        },
+        "minecraft:can_power_jump": {
+        },
+        "minecraft:behavior.player_ride_tamed": {
+        }
+      },
+
+      "minecraft:melee_attack": {
+        "minecraft:movement": {
+          "value": 0.3
+        },
+        "minecraft:behavior.delayed_attack": {
+          "priority": 4,
+          "reach_multiplier": 1.5,
+          "attack_duration": 0.75,
+          "hit_delay_pct": 0.5,
+          "track_target": true,
+          "sound_event": "attack.strong"
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 6,
+          "speed_multiplier": 0.4
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 7,
+          "look_distance": 6,
+          "angle_of_view_horizontal": 45,
+          "probability": 1
+        },
+        "minecraft:behavior.look_at_entity": {
+          "priority": 10,
+          "look_distance": 8,
+          "angle_of_view_horizontal": 45,
+          "filters": {
+            "test": "is_family",
+            "subject": "other",
+            "value": "mob"
+          }
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 2
+        },
+        "minecraft:behavior.mount_pathing": {
+          "priority": 5,
+          "speed_multiplier": 1.25,
+          "target_dist": 0.0,
+          "track_target": true
+        }
+      },
+
+      "minecraft:stunned": {
+        "minecraft:is_stunned": {
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 2,
+          "time_down_event": {
+            "event": "minecraft:start_roar"
+          }
+        }
+      },
+
+      "minecraft:roaring": {
+        "minecraft:behavior.knockback_roar": {
+          "priority": 1,
+          "duration": 1,
+          "attack_time": 0.5,
+          "knockback_damage": 6,
+          "knockback_strength": 3,
+          "knockback_range": 4,
+          "knockback_filters": {
+            "test": "is_family",
+            "subject": "other",
+            "operator": "!=",
+            "value": "ravager"
+          },
+          "on_roar_end": {
+            "event": "minecraft:end_roar"
+          },
+          "cooldown_time": 0.1
+        }
+      },
+
+      "ravager_skin_0": {
+        "minecraft:skin_id": {
+          "value": 0
+        }
+      },
+
+      "ravager_skin_1": {
+        "minecraft:skin_id": {
+          "value": 1
+        }
+      },
+
+      "ravager_skin_2": {
+        "minecraft:skin_id": {
+          "value": 2
+        }
+      },
+
+      "ravager_skin_3": {
+        "minecraft:skin_id": {
+          "value": 3
+        }
+      },
+
+      "ravager_skin_4": {
+        "minecraft:skin_id": {
+          "value": 4
+        }
+      },
+
+      "ravager_skin_5": {
+        "minecraft:skin_id": {
+          "value": 5
+        }
+      },
+
+      "desert_ravager": {
+        "minecraft:mark_variant": {
+          "value": 1
+        }
+      },
+
+      "jungle_ravager": {
+        "minecraft:mark_variant": {
+          "value": 2
+        }
+      },
+
+      "savanna_ravager": {
+        "minecraft:mark_variant": {
+          "value": 3
+        }
+      },
+
+      "snow_ravager": {
+        "minecraft:mark_variant": {
+          "value": 4
+        }
+      },
+
+      "swamp_ravager": {
+        "minecraft:mark_variant": {
+          "value": 5
+        }
+      },
+
+      "taiga_ravager": {
+        "minecraft:mark_variant": {
+          "value": 6
+        }
+      }
+    },
+
+
+    "components": {
+      "minecraft:equippable": {
+        "slots": [
+          {
+            "slot": 0,
+            "item": "saddle",
+            "accepted_items": ["saddle"],
+            "on_equip": {
+              "event": "minecraft:ravager_saddled"
+            },
+            "on_unequip": {
+              "event": "minecraft:ravager_unsaddled"
+            }
+          }
+        ]
+      },
+      "minecraft:ravager_blocked": {
+        "knockback_strength": 3.0,
+        "reaction_choices": [
+          {
+            "weight": 1,
+            "value": {
+              "event": "minecraft:become_stunned",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1
+          }
+        ]
+      },
+      "minecraft:attack": {
+        "damage": 12.0
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:collision_box": {
+        "height": 1.9,
+        "width": 1.2
+      },
+      "minecraft:health": {
+        "max": 108,
+        "value": 108
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "fall",
+          "deals_damage": false
+        }
+      },
+      "minecraft:knockback_resistance": {
+        "value": 0.5
+      },
+      "minecraft:movement": {
+        "value": 0.0
+      },
+      "minecraft:navigation.walk": {
+        "avoid_damage_blocks": true,
+        "can_path_over_water": true,
+        "can_sink": false
+      },
+      "minecraft:movement.basic": {
+        
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:nameable": {
+      },
+      "minecraft:horse.jump_strength": {
+        "value": {
+          "range_min": 0.4, 
+          "range_max": 1.0
+        }
+      },
+      "minecraft:leashable": {
+        "soft_distance": 4.0,
+        "hard_distance": 6.0,
+        "max_distance": 10.0
+      },
+      "minecraft:healable": {
+        "items": [
+          {
+            "item": "wheat",
+            "heal_amount": 2
+          },
+          {
+            "item": "sugar",
+            "heal_amount": 1
+          },
+          {
+            "item": "hay_block",
+            "heal_amount": 20
+          },
+          {
+            "item": "apple",
+            "heal_amount": 3
+          },
+          {
+            "item": "golden_carrot",
+            "heal_amount": 4
+          },
+          {
+            "item": "golden_apple",
+            "heal_amount": 10
+          },
+          {
+            "item": "appleEnchanted",
+            "heal_amount": 10
+          }
+        ]
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:break_blocks": {
+        "breakable_blocks": [
+          "bamboo",
+          "bamboo_sapling",
+          "beetroot",
+          "brown_mushroom",
+          "carrots",
+          "carved_pumpkin",
+          "chorus_flower",
+          "chorus_plant",
+          "deadbush",
+          "double_plant",
+          "leaves",
+          "leaves2",
+          "lit_pumpkin",
+          "melon_block",
+          "melon_stem",
+          "potatoes",
+          "pumpkin",
+          "pumpkin_stem",
+          "red_flower",
+          "red_mushroom",
+          "reeds",
+          "sapling",
+          "snow_layer",
+          "sweet_berry_bush",
+          "tallgrass",
+          "turtle_egg",
+          "vine",
+          "waterlily",
+          "wheat",
+          "yellow_flower"
+        ]
+      },
+      "minecraft:follow_range": {
+        "value": 64
+      },
+      "minecraft:type_family": {
+        "family": [ "friendly_ravager", "ravager", "mob" ]
+      }
+    },
+
+    "events": {
+      "minecraft:entity_spawned": {
+        "sequence": [
+          { "add": { "component_groups": [ "minecraft:ravager_adult", "minecraft:melee_attack", "minecraft:ravager_wild" ] } },
+          {
+            "filters": { "test": "has_component", "operator": "!=", "value": "minecraft:skin_id" },
+            "randomize": [
+              {
+                "weight": 1,
+                "add": { "component_groups": [ "ravager_skin_0" ] }
+              },
+              {
+                "weight": 1,
+                "add": { "component_groups": [ "ravager_skin_1" ] }
+              },
+              {
+                "weight": 1,
+                "add": { "component_groups": [ "ravager_skin_2" ] }
+              },
+              {
+                "weight": 1,
+                "add": { "component_groups": [ "ravager_skin_3" ] }
+              },
+              {
+                "weight": 1,
+                "add": { "component_groups": [ "ravager_skin_4" ] }
+              },
+              {
+                "weight": 1,
+                "add": { "component_groups": [ "ravager_skin_5" ] }
+              }
+            ]
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "desert"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "mesa"
+                }
+              ]
+            },
+            "add": { "component_groups": [ "desert_ravager" ] }
+          },
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "jungle"
+            },
+            "add": { "component_groups": [ "jungle_ravager" ] }
+          },
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "savanna"
+            },
+            "add": { "component_groups": [ "savanna_ravager" ] }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "all_of": [
+                    {
+                      "test": "has_biome_tag",
+                      "value": "cold"
+                    },
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "!=",
+                      "value": "ocean"
+                    }
+                  ]
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "frozen"
+                }
+              ]
+            },
+            "add": { "component_groups": [ "snow_ravager" ] }
+          },
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "swamp"
+            },
+            "add": { "component_groups": [ "swamp_ravager" ] }
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "any_of": [
+                    {
+                      "test": "has_biome_tag",
+                      "value": "taiga"
+                    },
+                    {
+                      "test": "has_biome_tag",
+                      "value": "extreme_hills"
+                    }
+                  ]
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "!=",
+                  "value": "cold"
+                }
+              ]
+            },
+            "add": { "component_groups": [ "taiga_ravager" ] }
+          }
+        ]
+      },
+
+      "minecraft:on_tame": {
+        "remove": {
+          "component_groups": [
+            "minecraft:ravager_wild"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:ravager_tamed"
+          ]
+        }
+      },
+
+      "minecraft:ravager_saddled": {
+        "add": {
+          "component_groups": [
+            "minecraft:ravager_saddled"
+          ]
+        }
+      },
+      "minecraft:ravager_unsaddled": {
+        "remove": {
+          "component_groups": [
+            "minecraft:ravager_saddled"
+          ]
+        }
+      },
+      
+      "minecraft:become_angry": {
+        "remove": {
+          "component_groups": [
+            "minecraft:ravager_wild"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:ravager_angry"
+          ]
+        }
+      },
+      "minecraft:on_calm": {
+        "remove": {
+          "component_groups": [
+            "minecraft:ravager_angry"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:ravager_wild"
+          ]
+        }
+      },
+      
+      "minecraft:become_stunned": {
+        "add": {
+          "component_groups": [
+            "minecraft:stunned"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "minecraft:melee_attack"
+          ]
+        }
+      },
+      "minecraft:start_roar": {
+        "add": {
+          "component_groups": [
+            "minecraft:roaring"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "minecraft:stunned"
+          ]
+        }
+      },
+      "minecraft:end_roar": {
+        "add": {
+          "component_groups": [
+            "minecraft:melee_attack"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "minecraft:roaring"
+          ]
+        }
+      }
+    }
+  }
+}

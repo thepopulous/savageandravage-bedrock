@@ -1,0 +1,47 @@
+{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.illusioner.general": {
+      "states": {
+        "default": {
+          "animations": [
+            { "look_at_target": [] },
+            { "general": [] }
+          ],
+          "transitions": [
+            { "bow_and_arrow": "query.has_target" },
+            { "casting": "query.is_casting" }
+          ]
+        },
+        "roaring": {
+          "animations": [
+            { "look_at_target": [] },
+            { "bow_and_arrow": [] }
+          ],
+          "transitions": [
+            { "default": "!query.has_target" }
+          ]
+        },
+        "casting": {
+          "animations": [
+            { "look_at_target": [] },
+            { "casting": [] }
+          ],
+          "particle_effects": [
+            {
+              "effect": "spell",
+              "locator": "left_hand"
+            },
+            {
+              "effect": "spell",
+              "locator": "right_hand"
+	        }
+          ],
+          "transitions": [
+            { "default": "!query.is_casting" }
+          ]
+        }
+      }
+    }
+  }
+}

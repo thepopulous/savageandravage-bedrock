@@ -1,0 +1,28 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "evoker:entity_alphatest": {
+      "depthFunc": "LessEqual"
+    },
+    "friendly_ravager:entity_alphatest": {
+      "depthFunc": "LessEqual"
+    },
+    "guard_illager:entity_alphatest": {},
+    "griefer_illager:entity_alphatest": {},
+    "hyena:entity_alphatest_change_color": {},
+    "illusioner:entity_alphatest": {},
+    "pillager:entity_alphatest": {
+      "depthFunc": "LessEqual"
+    },
+    "poultry_farmer:entity_alphatest": {},
+    "savageling:entity_alphatest": {},
+    "scavenger:entity_alphatest": {},
+    "skeleton_villager:entity_alphatest": {},
+    "vindicator:entity_alphatest": {
+      "depthFunc": "LessEqual"
+    },
+    "witch:entity_alphatest": {
+      "depthFunc": "LessEqual"
+    }
+  }
+}

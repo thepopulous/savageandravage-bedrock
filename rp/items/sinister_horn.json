@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "savageandravage:sinister_horn",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "sinister_horn",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

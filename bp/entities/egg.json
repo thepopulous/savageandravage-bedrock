@@ -1,0 +1,98 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:egg",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "minecraft:poultry_farmer_egg": {
+        "minecraft:projectile": {
+          "on_hit": {
+            "impact_damage": {
+              "damage": 0,
+              "knockback": true,
+              "destroy_on_hit": true
+            },
+            "spawn_chance": {
+              "first_spawn_chance": 1,
+              "second_spawn_chance": 2,
+              "first_spawn_count": 1,
+              "second_spawn_count": 2,
+              "spawn_mob": "chicken",
+              "spawn_definition": "minecraft:chicken<from_poultry_farmer_egg>",
+              "spawn_baby": true
+            },
+            "remove_on_hit": {
+            },
+            "particle_on_hit": {
+              "particle_type": "iconcrack",
+              "num_particles": 6,
+              "on_entity_hit": true,
+              "on_other_hit": true
+            }
+          },
+          "power": 1.5,
+          "gravity": 0.03,
+          "angle_offset": 0.0
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.25,
+        "height": 0.25
+      },
+      "minecraft:projectile": {
+        "on_hit": {
+          "impact_damage": {
+            "damage": 0,
+            "knockback": true,
+            "destroy_on_hit": true
+          },
+          "spawn_chance": {
+            "first_spawn_chance": 8,
+            "second_spawn_chance": 32,
+            "first_spawn_count": 1,
+            "second_spawn_count": 4,
+            "spawn_definition": "minecraft:chicken",
+            "spawn_baby": true
+          },
+          "remove_on_hit": {
+          },
+          "particle_on_hit": {
+            "particle_type": "iconcrack",
+            "num_particles": 6,
+            "on_entity_hit": true,
+            "on_other_hit": true
+          }
+        },
+        "power": 1.5,
+        "gravity": 0.03,
+        "angle_offset": 0.0
+      },
+	    "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      }
+    },
+
+    "events": {
+      "minecraft:entity_spawned": {
+        "sequence": [
+          {
+            "filters": {"test": "is_family", "subject": "other", "value": "poultry_farmer"},
+            "add": {
+              "component_groups": [ "minecraft:poultry_farmer_egg" ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
