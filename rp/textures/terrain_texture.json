@@ -21,12 +21,12 @@
     },
     "gloomy_tiles": {
       "textures": [
-        "textures/blocks/gloomy_tiles"
+        "textures/blocks/gloomy_tile"
       ]
     },
     "chiseled_gloomy_tiles": {
       "textures": [
-        "textures/blocks/chiseled_gloomy_tiles"
+        "textures/blocks/chiseled_gloomy_tile"
       ]
     }
   }

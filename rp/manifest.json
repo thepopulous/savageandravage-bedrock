@@ -4,21 +4,21 @@
     "description": "Recource pack for the Savage and ravage addon",
     "name": "Savage and Ravage",
     "uuid": "887be6ab-7912-4c90-9d50-8b105830f735",
-    "version": [ 2, 0, 0 ],
+    "version": [ 0, 0, 1 ],
     "min_engine_version": [ 1, 13, 0 ]
   },
   "modules": [
     {
       "description": "minecraft bedrock 1.13",
-      "type": "data",
+      "type": "resources",
       "uuid": "995a07ee-f4d1-43f3-b881-c2d343dd9d71",
-      "version": [ 2, 0, 0 ]
+      "version": [ 0, 0, 1 ]
     }
   ],
   "dependencies": [
     {
-      "uuid": "cf6b3dd5-85ea-455b-a095-73e57bdf8a81",
-      "version": [ 2, 0, 0 ]
+      "uuid": "a205c94e-f6d9-446c-9a19-dfe2383716a8",
+      "version": [ 1, 0, 0 ]
     }
   ]
 }
