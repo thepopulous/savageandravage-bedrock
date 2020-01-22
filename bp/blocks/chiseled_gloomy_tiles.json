@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "popul:chiseled_gloomy_tiles",
+      "is_experimental": false,
+      "register_to_creative_menu": true
+    },
+    "components": {
+      "minecraft:loot": {
+        "table": "loot_tables/blocks/chiseled_gloomy_tiles.json"
+      },
+      "minecraft:destroy_time": {
+        "value": 2
+      },
+      "minecraft:explosion_resistance": {
+        "value": 15.0
+      },
+      "minecraft:map_color": {
+        "color": "#6c626a"
+      }
+    }
+  }
+}

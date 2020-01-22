@@ -1,0 +1,33 @@
+{
+   "resource_pack_name": "vanilla",
+   "texture_name": "atlas.terrain",
+   "padding": 8,
+   "num_mip_levels": 4,
+  "texture_data": {
+    "creeper_spore_top": {
+      "textures": [
+        "textures/blocks/creeper_spore_sack_top"
+      ]
+    },
+    "creeper_spore_bottom": {
+      "textures": [
+        "textures/blocks/creeper_spore_sack_bottom"
+      ]
+    },
+    "creeper_spore_side": {
+      "textures": [
+        "textures/blocks/creeper_spore_sack_side"
+      ]
+    },
+    "gloomy_tiles": {
+      "textures": [
+        "textures/blocks/gloomy_tiles"
+      ]
+    },
+    "chiseled_gloomy_tiles": {
+      "textures": [
+        "textures/blocks/chiseled_gloomy_tiles"
+      ]
+    }
+  }
+}

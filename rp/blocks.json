@@ -1,0 +1,19 @@
+{
+  "format_version": [ 1, 1, 0 ],
+  "popul:creeper_spore": {
+    "textures": {
+      "up": "creeper_spore_top",
+      "down": "creeper_spore_bottom",
+      "side": "creeper_spore_side"
+    },
+    "sound": "wood"
+  },
+  "popul:gloomy_tiles": {
+    "textures": "gloomy_tiles",
+    "sound": "stone"
+  },
+  "popul:chiseled_gloomy_tiles": {
+    "textures": "chiseled_gloomy_tiles",
+    "sound": "stone"
+  }
+}
