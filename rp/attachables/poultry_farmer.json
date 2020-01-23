@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "savageandravage:poultry_farmer",
+      "materials": {
+        "default": "armor"
+      },
+      "textures": {
+        "default": "textures/models/armor/poultry_farmer_hat"
+      },
+      "geometry": {
+        "default": "geometry.poultry_farmer"
+      },
+      "render_controllers": [ "controller.render.armor" ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"geometry.guard_hat": {
+		"texturewidth": 64,
+		"textureheight": 64,
+		"visible_bounds_width": 2,
+		"visible_bounds_height": 1,
+		"visible_bounds_offset": [0, 0.5, 0],
+		"bones": [
+			{
+				"name": "head",
+				"pivot": [0, 24, 0],
+				"cubes": [
+					{"origin": [-8, 27, -8], "size": [16, 0, 16], "uv": [0, 16]},
+					{"origin": [-4, 27.14, -4], "size": [8, 5, 8], "uv": [0, 0]},
+					{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [32, 0], "inflate": 0.6}
+				]
+			}
+		]
+	}
+}
