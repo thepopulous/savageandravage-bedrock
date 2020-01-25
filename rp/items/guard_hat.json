@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "savageandravage:guard_helm",
+      "category": "equipment"
+    },
+    "components": {
+      "minecraft:icon": "guard_helmet",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

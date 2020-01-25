@@ -1,0 +1,29 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.guard_helm": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"walking": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/function guard_helm"
+					]
+				},
+				"walking": {
+					"transitions": [
+						{
+							"default": "query.is_chested && query.is_using_item"
+						}
+					],
+					"on_entry": [
+						"/function guard_helm"
+					]
+				}
+			}
+		}
+	}
+}

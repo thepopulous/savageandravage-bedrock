@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "savageandravage:poultry_farmer_hat",
+      "category": "equipment"
+    },
+    "components": {
+      "minecraft:icon": "poultry_farmer_hat",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}
