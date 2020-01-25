@@ -1,7 +1,7 @@
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
-		"controller.animation.farmer_hat": {
+//		"controller.animation.farmer_hat": {
 			"states": {
 				"default": {
 					"transitions": [
@@ -10,13 +10,13 @@
 						}
 					],
 					"on_entry": [
-						"/function poultry_farmer_hat"
+//						"/function poultry_farmer_hat"
 					]
 				},
 				"walking": {
 					"transitions": [
 						{
-							"default": "query.is_sheared && query.is_using_item"
+							"default": "query.is_saddled && query.is_using_item"
 						}
 					],
 					"on_entry": [

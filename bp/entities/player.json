@@ -70,7 +70,7 @@
         }
       },
       "mage:farmer_hat": {
-        "minecraft:is_sheared": {}
+        "minecraft:is_saddled": {}
       },
       "mage:standard_player": {
         "minecraft:health": {
