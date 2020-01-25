@@ -16,7 +16,7 @@
         "desert": "textures/entity/friendly_ravager/biomes/biome_desert",
         "jungle": "textures/entity/friendly_ravager/friendly_ravager_base",
         "plains": "textures/entity/friendly_ravager/friendly_ravager_base",
-        "savanna": "textures/entity/friendly_ravager/friendly_ravager_base",
+        "savanna": "textures/entity/friendly_ravager/biomes/biome_savanna",
         "snow": "textures/entity/friendly_ravager/biomes/biome_snow",
         "swamp": "textures/entity/friendly_ravager/friendly_ravager_base",
         "taiga": "textures/entity/friendly_ravager/friendly_ravager_base",
