@@ -8,7 +8,7 @@
     "guard_helmet": {
       "textures": "textures/items/guard_helmet"
     },
-    "poultry_farmer_hat": {
+    "poultry_farmer_hats": {
       "textures": "textures/items/poultry_farmer_hat"
     },
     "sinister_horn": {
