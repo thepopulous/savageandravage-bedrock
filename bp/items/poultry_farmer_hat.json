@@ -2,7 +2,7 @@
   "format_version": "1.10",
   "minecraft:item": {
     "description": {
-      "identifier": "savageandravage:poultry_farmer_hat"
+      "identifier": "savageandravage:poultry_farmer_hats"
     },
     
     "components": {
