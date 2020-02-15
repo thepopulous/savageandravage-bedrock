@@ -63,32 +63,6 @@
           "max_temper": 100,
           "feed_text": "action.interact.feed",
           "ride_text": "action.interact.mount",
-          "feed_items": [
-            {
-              "item": "wheat",
-              "temper_mod": 3
-            },
-            {
-              "item": "sugar",
-              "temper_mod": 3
-            },
-            {
-              "item": "apple",
-              "temper_mod": 3
-            },
-            {
-              "item": "golden_carrot",
-              "temper_mod": 5
-            },
-            {
-              "item": "golden_apple",
-              "temper_mod": 10
-            },
-            {
-              "item": "appleEnchanted",
-              "temper_mod": 10
-            }
-          ],
           "auto_reject_items": [
             {
               "item": "saddle"
@@ -103,16 +77,6 @@
 
       "minecraft:ravager_tamed": {
         "minecraft:is_tamed": {
-        },
-        "minecraft:health": {
-          "max": 120,
-          "value": 120
-        },
-        "minecraft:behavior.follow_owner": {
-          "priority": 6,
-          "speed_multiplier": 1.0,
-          "start_distance": 10,
-          "stop_distance": 2
         },
         "minecraft:behavior.owner_hurt_by_target": {
           "priority": 1
@@ -140,21 +104,6 @@
         "minecraft:inventory": {
           "inventory_size": 2,
           "container_type": "horse"
-        },
-        "minecraft:behavior.tempt": {
-          "priority": 5,
-          "speed_multiplier": 1.2,
-          "items": [
-            "apple",
-            "carrot",
-            "golden_apple",
-            "appleEnchanted",
-            "golden_carrot",
-            "hay_block",
-            "sugar",
-            "bread",
-            "wheat"
-          ]
         }
       },
 
@@ -162,8 +111,6 @@
         "minecraft:is_saddled": {
         },
         "minecraft:input_ground_controlled": {
-        },
-        "minecraft:can_power_jump": {
         },
         "minecraft:behavior.player_ride_tamed": {
         }
@@ -201,8 +148,9 @@
             "value": "mob"
           }
         },
-        "minecraft:behavior.hurt_by_target": {
-          "priority": 2
+        "minecraft:behavior.panic": {
+          "priority": 1,
+          "speed_multiplier": 1.5
         },
         "minecraft:behavior.mount_pathing": {
           "priority": 5,
@@ -362,8 +310,8 @@
         "width": 1.2
       },
       "minecraft:health": {
-        "max": 108,
-        "value": 108
+        "max": 60,
+        "value": 60
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [

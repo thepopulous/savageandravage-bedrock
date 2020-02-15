@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "savageandravage:brew_of_the_beast",
+      "category": "items"
+    },
+    "components": {
+      "minecraft:icon": "brew_of_the_beast",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

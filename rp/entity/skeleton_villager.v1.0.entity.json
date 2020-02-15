@@ -23,6 +23,8 @@
         "holding": "animation.humanoid.holding.v1.0",
         "brandish_spear": "animation.humanoid.brandish_spear.v1.0",
         "charging": "animation.humanoid.charging.v1.0",
+        "crossbow_hold": "animation.pillager.crossbow.hold",
+        "crossbow_charge": "animation.pillager.crossbow.charge",
         "attack.rotations": "animation.humanoid.attack.rotations.v1.0",
         "sneaking": "animation.humanoid.sneaking.v1.0",
         "bob": "animation.humanoid.bob.v1.0",

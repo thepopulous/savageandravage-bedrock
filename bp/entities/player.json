@@ -67,19 +67,11 @@
 				}
 			},
 			"guard_helmplay": {
-				"minecraft:health": {
-					"value": 30,
-					"max": 30
-				}
 			},
 			"guard_helm": {
 				"minecraft:is_chested": {}
 			},
 			"farmer_hatplay": {
-				"minecraft:health": {
-					"value": 26,
-					"max": 26
-				}
 			},
 			"farmer_hat": {
 				"minecraft:is_saddled": {}
